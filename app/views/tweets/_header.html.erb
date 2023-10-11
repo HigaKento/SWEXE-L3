@@ -1,0 +1,16 @@
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+<% end %>
+
+<% @tweets.each do |e| %>
+    <p>
+        <ul>
+            <li>ツイート</li>
+            
+            <li>ツイートと返信</li>
+
+            <li>メディア</li>
+
+            <li>いいね</li>
+        </ul>
+<% end %>
