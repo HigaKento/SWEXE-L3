@@ -4,6 +4,7 @@
 
 <% @tweets.each do |e| %>
     <p>
+        <%=link_to '表示', "/tweets/#{e.id}" %>
         <ul>
             <li>ツイート</li>
             
