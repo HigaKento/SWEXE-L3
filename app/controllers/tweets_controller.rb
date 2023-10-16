@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
     def create
       @tweet = Tweet.new(message: params[:tweet][:message], tdate: Time.current)
       if @tweet.save
-        flash[:notice] = '1レコード追加しました'
+        flash[:notice] = 'ツイートしました'
         redirect_to '/'
       else
         render 'new'
@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
     def destroy
       tweet = Tweet.find(params[:id])
       tweet.destroy
-      flash[:notice] = '1レコード削除しました'
+      flash[:notice] = 'ツイートを削除しました'
       redirect_to '/'
     end
     def show
@@ -29,7 +29,7 @@ class TweetsController < ApplicationController
     def update
       @tweet = Tweet.find(params[:id])
       if @tweet.update(message: params[:tweet][:message])
-        flash[:notice] = '1レコード更新しました'
+        flash[:notice] = 'ツイートを更新しました'
         redirect_to '/'
       else
         render 'edit'

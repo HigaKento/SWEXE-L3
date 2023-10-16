@@ -1,23 +1,8 @@
-<% if flash[:notice] %>
-    <%= flash[:notice] %>
-<% end %>
-
-<% @tweets.each do |e| %>
-    <p>
-        <%= ((Time.current - e.tdate)/60).to_i %>分
-        <ul>
-            <%= ((Time.current - e.tdate)/60).to_i %>分
-            <%=li>ホーム</li>%>
-                    
-            <%=<li>話題を検索</li>%>
-
-            <%=<li>通知</li>%>
-
-            <%=<li>メッセージ</li>%>
-            
-            <%=<li>ブックマーク</li>%>
-            
-            <%=<li>ツイートする</li>%>
-        <ul>
-    </p>
-<% end %>
+            <li>ホーム</li>
+            <li>話題を検索</li>
+            <li>通知</li>
+            <li>メッセージ</li>
+            <li>ブックマーク</li>
+        <div id=side>
+            <li>ツイートする</li>
+        </div>
